@@ -1,0 +1,29 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Name:</strong>
+  <%= @searcheat.name %>
+</p>
+
+<p>
+  <strong>Price:</strong>
+  <%= @searcheat.price %>
+</p>
+
+<p>
+  <strong>Location:</strong>
+  <%= @searcheat.location %>
+</p>
+
+<p>
+  <strong>People:</strong>
+  <%= @searcheat.people %>
+</p>
+
+<p>
+  <strong>Kind:</strong>
+  <%= @searcheat.kind %>
+</p>
+
+<%= link_to 'Edit', edit_searcheat_path(@searcheat) %> |
+<%= link_to 'Back', searcheats_path %>

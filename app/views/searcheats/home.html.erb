@@ -1,0 +1,52 @@
+<h1>Searcheat</h1>
+<table>
+<tr>
+<td class="list">
+<blockquote>
+<p>王者以民為天，而民以食為天。</p>
+<footer>《漢書·酈食其傳》</footer>
+</blockquote>
+</td>
+<td>
+<% @searcheatskind.each do |searcheat| %>
+
+        <%= searcheat.kind %>
+        <br>
+    <% end %>
+
+</td>
+<tr>
+</table>
+<a>
+<%= form_tag root_path, method: :get do %>
+<%= text_field_tag :search, params[:search] ,placeholder: "說說想吃甚麼類型~"%>
+<% end %>
+</a>
+<table class="table table-hover">
+
+  <thead>
+ 
+   
+  </thead>
+  <tbody>
+    
+    <% @searcheats.each do |searcheat| %>
+      <tr>
+        <td class="data">
+        <ul class="list-style">  
+        <h5><%= searcheat.name %></h5>
+        <br>
+        <%= searcheat.price %>
+         <br>
+        <%= searcheat.location %>
+         <br>
+        <%= searcheat.people %>
+         <br>
+        <%= searcheat.kind %>
+        </ul></td>
+    <% end %>
+    </tr>
+  </tbody>
+  </table>
+ 
+<%= link_to '開心', root_path %>
